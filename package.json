@@ -1,0 +1,21 @@
+{
+  "name": "fhormm",
+  "version": "1.3.2",
+  "description": "A calculator with which you can calculate download time for a file depending on download speed.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "fhormm",
+    "speed-net",
+    "calculator",
+    "calculate",
+    "date",
+    "time",
+    "file",
+    "fhorm"
+  ],
+  "author": "Ali Furkqn",
+  "license": "ISC"
+}
