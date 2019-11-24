@@ -29,7 +29,7 @@ Only download this module: `npm install fhormm`
     const fhormm = require('fhormm');
     fhormm.calculate(fileSize, netSpeed, DateType)
 ```
-###Constructor
+### Constructor
 - fhormm.calculate(fileSize: `integer|string`, netSpeed: `integer|string`, DateType: `Default|ShortDate|LongDate`)
     This Module is general expression.
 ### Parameter
