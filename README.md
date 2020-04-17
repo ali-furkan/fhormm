@@ -15,52 +15,29 @@
    How long time it will take depends on file size, your own download speed and the server's upload speed.And this very useful.
 
 ## Installation
-Only download this module: `npm install fhormm`
-## Usage-Calculate
-###For Example
-```js
-    const fhormm = require('fhormm');
-    fhormm.calculate(1,16)
-    //Output: 8 minutes 32 seconds
-```
-
-### Rules for Usage
-```js
-    const fhormm = require('fhormm');
-    fhormm.calculate(fileSize, netSpeed, DateType)
-```
-### Constructor
-- fhormm.calculate(fileSize: `integer|string`, netSpeed: `integer|string`, DateType: `Default|ShortDate|LongDate`)
+Just type `npm install fhormm` in terminal
+## Usage
+- fhormm(size: `number|string`, speed: `number|string`, type: `date|duration`)
     This Module is general expression.
-### Parameter
-|Param|Type|Usage|
-| --- | --- | --- |
-| fileSize | String or Number | "1GB","1" or 1 |
-| netSpeed | String or Number |"1MB/s","1" or 1 |
-| DateType | String | "Default" or "d","ShortDate" or "sd","LongDate" or "ld","Custom" or "c" |
-- **fileSize**: Used as integer or string.If you use it as a integer,File size type be `GB`.If you want use it as a string, You must use 5 different options. These `Byte` `KB` `MB` `GB` `TB`
-- **netSpeed**: Used as integer or string.If you use it as a integer,Internet speed's type be `mbps`.If you want use it as a string, You must use 10 different options. These: `Byteps` `Byte/s` `kbps` `KB/s` `mbps` `MB/s` `gbps` `GB/s` `tbps` `TB/s`
-- **DateType**:You must use 3 different options.These `Default` `ShortDate` `LongDate`.If You don't this parameter, DateType be `Default`.
-## Usage-Whenllitd
-### Example
+### For Example
 ```js
     const fhormm = require('fhormm');
-    fhormm.whenllitd(1,16)
-    //Output: 2018-10-10 19:5:12
+    fhormm("1GB","16mb/s","duration")
+    //Return: 64000
 ```
-### Rules for Usage
-```js
-    const fhormm = require('fhormm');
-    fhormm.whenllitd(fileSize, netSpeed, Type)
-```
-### Parameter
+### Parameters
 |Param|Type|Usage|
 | --- | --- | --- |
-| fileSize | String or Number | "1GB","1" or 1 |
-| netSpeed | String or Number |"1MB/s","1" or 1 |
-| Type | String | "Default" or "d", "Custom" or "c" |
+| size | String or Number | "1GB","1" or 1 |
+| speed | String or Number |"1MB/s","1" or 1 |
+| type | Enum | 'date','duration' |
+- **size**: This param means file size.Use number or string.If it's number,size's type is `byte`.If it's string, You must use different options. These `Byte` `KB` `MB` `GB` `TB`,`PB`,`EB`,`ZB`,`YB`
+- **speed**: Use number or string.If you use it as a number,Internet speed's type be `bps`.If you want use it as a string, You must use different options. These: `Byteps` `Byte/s` `kbps` `KB/s` `mbps` `MB/s` `gbps` `GB/s` `tbps` `TB/s`, **ps, **/s ...
+- **type**: Result is depend type parameter .It has 2 options.These `date` and `duration`.
+    - **date:** return `Date` data
+    - **duration** return `Number` data. And type is milisecond
+If this parameter is undefined, param is `date`.
 
-## Note
--If fileSize and netSpeed's types are not specified, The values ​​are read type of MB
--If Type (Paramater) is undefined, Type is read "Default"
-**These rules are valid for all methods**
+# Note
+- If size and speed's types are not specified, The values ​​are read type of byte and bit/s
+- If Type (Paramaters) is undefined, Type is read "0 byte or 0 bit/s"

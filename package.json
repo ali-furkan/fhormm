@@ -1,6 +1,6 @@
 {
   "name": "fhormm",
-  "version": "1.3.2",
+  "version": "1.5.0",
   "description": "A calculator with which you can calculate download time for a file depending on download speed.",
   "main": "index.js",
   "scripts": {
